@@ -1,0 +1,23 @@
+extends ../layout.pug
+
+block content
+    div(class="d-flex flex-row content justify-content-center mx-auto")
+        form(class="card" method='post' action= '/users/signup')
+            div(class="card-header") Inscription
+            div(class='card-body')
+                div(class='form-groupe')
+                    label(for="username") User Name
+                    input(type="text" class="form-control" name='username')
+                div(class='form-groupe')
+                    label(for="email") Email
+                    input(type="email" class="form-control" name='email')
+                div(class='form-groupe')
+                    label(for="password") Password
+                    input(type="password" class="form-control" name='password')
+                if errors
+                    ul(class='my-2')
+                        each error in errors
+                            li(class="text-danger") = error
+                div(class="w-100")
+                    input(type="submit" value="Submit" class="btn btn-primary ml-auto d-block")
+    
