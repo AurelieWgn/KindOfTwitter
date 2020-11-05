@@ -3,3 +3,5 @@ Exercise to practice Node and Express. The goal is not the aesthetics but rather
 
 npm i
 npm start 
+
+You can find the typescript version on typescriptConvertion branch
